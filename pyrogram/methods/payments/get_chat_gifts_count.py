@@ -32,8 +32,10 @@ class GetChatGiftsCount:
         exclude_unsaved: Optional[bool] = None,
         exclude_saved: Optional[bool] = None,
         exclude_unlimited: Optional[bool] = None,
-        exclude_limited: Optional[bool] = None,
-        exclude_upgraded: Optional[bool] = None
+        exclude_upgraded: Optional[bool] = None,
+        exclude_upgradable: Optional[bool] = None,
+        exclude_unupgradable: Optional[bool] = None,
+        collection_id: Optional[int] = None,
     ) -> int:
         """Get the total count of owned gifts of specified chat.
 
@@ -77,8 +79,10 @@ class GetChatGiftsCount:
                 exclude_unsaved=exclude_unsaved,
                 exclude_saved=exclude_saved,
                 exclude_unlimited=exclude_unlimited,
-                exclude_limited=exclude_limited,
                 exclude_unique=exclude_upgraded,
+                exclude_upgradable=exclude_upgradable,
+                exclude_unupgradable=exclude_unupgradable,
+                collection_id=collection_id,
                 limit=1
             )
         )

@@ -29,8 +29,10 @@ class GetChatGifts:
         exclude_unsaved: Optional[bool] = None,
         exclude_saved: Optional[bool] = None,
         exclude_unlimited: Optional[bool] = None,
-        exclude_limited: Optional[bool] = None,
         exclude_upgraded: Optional[bool] = None,
+        exclude_upgradable: Optional[bool] = None,
+        exclude_unupgradable: Optional[bool] = None,
+        collection_id: Optional[int] = None,
         sort_by_value: Optional[bool] = None,
         limit: int = 0,
         offset: str = ""
@@ -93,8 +95,10 @@ class GetChatGifts:
                     exclude_unsaved=exclude_unsaved,
                     exclude_saved=exclude_saved,
                     exclude_unlimited=exclude_unlimited,
-                    exclude_limited=exclude_limited,
                     exclude_unique=exclude_upgraded,
+                    exclude_upgradable=exclude_upgradable,
+                    exclude_unupgradable=exclude_unupgradable,
+                    collection_id=collection_id,
                     sort_by_value=sort_by_value
                 ),
                 sleep_threshold=60
